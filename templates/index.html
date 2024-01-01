@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Megasight</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <!-- Include FontAwesome library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-xrFSWMDiV2c9xZUQaTlQuNQz8DyuwdeR1J4Kw1ofOuGz6wVnRCYK7vD0BCkSD1tlUwt+1cFjR6at3vK86WIvgQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/style_index.css') }}"
+    />
+  </head>
+</html>
+
+<body>
+
+
+  <div class="modal fade" id="contactModal" tabindex="-1"
+    aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-slidein">
+      <div class="modal-content form-modal-content">
+        <div class="modal-header textarea">
+          <h5 class="modal-title form-modal-title" id="contactModalLabel">Contact
+            Us</h5>
+
+        </div>
+        <div class="modal-body">
+          <!-- Form container -->
+          <div class="form-container">
+            <!-- Your contact form -->
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="submitForm()">
+                Submit
+              </button>
+            </form>
+
+            <!-- End contact form -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div id="imageCarousel" class="carousel">
+  <div class="carousel-inner">
+    <!-- Image slide -->
+    <div class="carousel-item active">
+      <img src="../static/images/black_white_meeting.jpg"
+        class="d-block w-100" style="height: 980px;"
+        alt="Slide 1">
+      <!-- Slogan -->
+      <div class="slogan-container">
+        <h3 class="slogan">Elevate Business <br>With
+          MegaSight.Ai </h3>
+        <p
+          style="color: white; font-weight: bolder; font-size: 1.2em;">We
+          meticulously craft and deploy enduring Machine
+          Learning solutions.</p>
+      </div>
+      <!-- Transparent Container -->
+      <!-- Container with Bootstrap Cards -->
+
+    </div>
+    <!-- Add more carousel items as needed -->
+  </div>
+
+  <div class="d-flex align-items-center" style="height: 12vh;">
+    <nav
+      class="navbar navbar-dark navbar-expand-lg fixed-top mx-auto">
+      <div class="container">
+        <a class="navbar-brand" href="#">MegaSight.Ai</a>
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"
+          id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active"
+                aria-current="page"
+                href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                href="{{ url_for('about') }}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#contactModal">Contact
+                Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Bootstrap Carousel -->
+</div>
+
+<div class="intro-megasight-container">
+  <div class="row" id = "swip-up-onscroll">
+    <!-- Left Column -->
+    <div class="col-md-7">
+      <h3 class="intro-megasight-container-heading">
+        MegaSight.Ai </h3>
+      <p class="intro-megasight-container-text">We
+        deliver dedicated attention and exceptional service,
+        solidifying our position as a leading global
+        provider.
+        We leverage our extensive experience and knowledge,
+        continuously refined and updated, to deliver
+        innovative
+        solutions and best practices</p>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-md-4">
+      <a href="mailto:hello@megasight.ai"
+        class="btn  intro-megasight-container-button">Start
+        Your
+        Journey With Us!</a>
+    </div>
+  </div>
+</div>
+
+<div class="our-edge-section-container container-fluid" style="background-image: url('../static/images/why_us.jpg');">
+  <div>
+    <div class="our-edge-section-heading">
+      <h3
+        style="color: #f8f8f8; display: inline; font-size: 50px; font-weight: bold;">Why
+      </h3>
+      <h3
+        style="color: rgb(10, 228, 178); display: inline; font-size: 50px; font-weight: bold;">MegaSight.Ai<br><br></h3>
+    </div>
+
+  </div>
+
+
+  <div class="row justify-content-center" id="our-edge-heading">
+    <!-- Card 1 -->
+    <div class="col-md-5 mb-4">
+      <div class="card our-edge-section-card">
+        <div class="card-body">
+          <p
+            class="our-edge-section-card-heading">Collaboration</p>
+          <p class="our-edge-section-card-text">Our expertise
+            thrives on your vision. At MegaSight.Ai, we
+            combine our AI know-how with your unique needs
+            to achieve groundbreaking results, together.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-5 mb-4">
+      <div class="card our-edge-section-card">
+        <div class="card-body">
+          <p
+            class="our-edge-section-card-heading">Scalability</p>
+          <p class="our-edge-section-card-text">At
+            MegaSight.Ai, scalability is a driving force
+            behind our software solutions. We understand
+            that businesses and organizations grow, evolve,
+            and face changing demands." with a focus on
+            imagery</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Cards in the Second Row -->
+    <!-- Card 3 -->
+    <div class="col-md-5 mb-4">
+      <div class="card our-edge-section-card">
+        <div class="card-body">
+          <p
+            class="our-edge-section-card-heading">User-centric
+            design</p>
+          <p class="our-edge-section-card-text">Forget
+            complicated tech! We make things clear and easy
+            to use. Together, we use data to design
+            experiences that truly delight.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-5 mb-4">
+      <div class="card our-edge-section-card">
+        <div class="card-body">
+          <p class="our-edge-section-card-heading">Continuous
+            improvement</p>
+          <p class="our-edge-section-card-text"> We leverage
+            data to constantly evolve and optimize our
+            operations, delivering unparalleled value</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="services-background-container">
+  <div class="our-services-section-heading">
+    <h3
+      style="color: #000000; display: inline; font-size: 50px; font-weight: bold;">Our
+    </h3>
+    <h3
+      style="color: rgb(9, 199, 155); display: inline; font-size: 50px; font-weight: bold;">Services<br><br></h3>
+  </div>
+
+
+  <div class="container mt-5">
+    <!-- Larger Screen Content -->
+    <div class="d-none d-md-block"  id = "our-founder-card-movement">
+      <div class="row mt-3 justify-content-between">
+        <!-- First Card and Image -->
+        <div class="col-md-4 mb-4 d-flex align-items-left"
+          style="margin-left: 30px;">
+          <div class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 30px;">
+            <div class="card-body custom-card text-end text-justify">
+              <h5 class="card-title card-heading font-weight-bold">
+                Website Development
+              </h5>
+              <p class="card-text text-justify">
+                We develop custom websites that help your business do more.
+                Our expert web development teams build websites that make
+                business processes more efficient, improve customer
+                experience, and generate more profit for our clients.
+              </p>
+            </div>
+          </div>
+          <img
+            src="../static/images/website development.svg"
+            class="img-fluid rounded"
+            alt="Website Logo"
+            style="width: 60px; height: 60px; margin-left: 10px" />
+        </div>
+
+        <!-- Second Image and Card -->
+        <div class="col-md-4 mb-4 d-flex align-items-left"
+          style="margin-right: 35px">
+          <img
+            src="../static/images/machine learning.svg"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-right: 24px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                Machine Learning and AI
+              </h5>
+              <p class="card-text text-justify">
+                We develop custom Machine Learning and Deep Learning models
+                that find trends and predict outcomes. Our clients in
+                Fintech, Healthcare, Retail, Marketing, and E-commerce swear
+                by our services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none d-md-block"  id = "our-founder-card-movement-2line">
+      <div class="row mt-3 justify-content-between">
+        <!-- First Card and Image -->
+        <div class="col-md-4 mb-4 d-flex align-items-left"
+          style="margin-left: 30px;">
+          <div class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 24px;">
+            <div class="card-body custom-card text-end text-justify">
+              <h5 class="card-title card-heading font-weight-bold">
+                Mobile App Development
+              </h5>
+              <p class="card-text text-justify">
+                Be sure to have your online business presence on Google App
+                Store or Apple Store today. With the help of our team, we
+                deliver scalable and perfectly positioned apps with enhanced
+                user experience.
+              </p>
+            </div>
+          </div>
+          <img
+            src="../static/images/Mobile_app_Development_Icon.svg"
+            class="img-fluid rounded"
+            alt="Website Logo"
+            style="width: 60px; height: 60px; margin-left: 10px" />
+        </div>
+
+        <!-- Second Image and Card -->
+        <div class="col-md-4 mb-4 d-flex align-items-left"
+          style="margin-right: 35px">
+          <img
+            src="../static/images/ui_ux_design.png"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-right: 24px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                UI/UX Design
+              </h5>
+              <p class="card-text text-justify">
+                We understand the soul of your brand and translate it
+                into interfaces that captivate users. Beyond stunning visuals,
+                we design for intuitiveness guiding your customers seamlessly
+                to their goals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none d-md-block"  id = "our-founder-card-movement-3line">
+      <div class="row mt-3 justify-content-between">
+        <!-- First Card and Image -->
+        <div class="col-md-4 mb-4 d-flex align-items-left"
+          style="margin-left: 30px;">
+          <div class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 24px;">
+            <div class="card-body custom-card text-end text-justify">
+              <h5 class="card-title card-heading font-weight-bold">
+                Data Science and Analytics
+              </h5>
+              <p class="card-text text-justify">
+                Make data-driven decisions with the help of our AI powered
+                solutions. Our Data Mining tools along with Predictive
+                Analytics and Data Analysis can help you with your Business
+                Decisions by providing actionable insights.
+              </p>
+            </div>
+          </div>
+          <img
+            src="../static/images/Data_Science_Icon.svg"
+            class="img-fluid rounded"
+            alt="Website Logo"
+            style="width: 60px; height: 60px; margin-left: 10px" />
+        </div>
+
+        <!-- Second Image and Card -->
+        <div class="col-md-4 mb-4 d-flex align-items-left"
+          style="margin-right: 35px">
+          <img
+            src="../static/images/Hire_Developers_Icon.svg"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-right: 30px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                Hire Developers
+              </h5>
+              <p class="card-text text-justify">
+                Our “can do” attitude developers help you rapidly scale up
+                your projects or expand your operation. Hire a single
+                developer or an entire team to complete your project
+                successfully. Hire great talent and deliver top results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--End for larger screen-->
+
+    <!-- Smaller Screen Content -->
+    <div class="d-md-none" >
+      <div class="row mt-3 justify-content-between">
+        <!-- First Card and Image -->
+        <div class="col-12 mb-4 d-flex align-items-left">
+          <img
+            src="../static/images/website development.svg"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 10px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                Website Development
+              </h5>
+              <p class="card-text text-justify">
+                We develop custom websites that help your business do more.
+                Our expert web development teams build websites that make
+                business processes more efficient, improve customer
+                experience, and generate more profit for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Image and Card -->
+        <div class="col-12 mb-4 d-flex align-items-left">
+          <img
+            src="../static/images/machine learning.svg"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 10px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                Machine Learning and AI
+              </h5>
+              <p class="card-text text-justify">
+                We develop custom Machine Learning and Deep Learning models
+                that find trends and predict outcomes. Our clients in
+                Fintech, Healthcare, Retail, Marketing, and E-commerce swear
+                by our services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-md-none">
+      <div class="row mt-3 justify-content-between">
+        <!-- First Card and Image -->
+        <div class="col-12 mb-4 d-flex align-items-left">
+          <img
+            src="../static/images/Mobile_app_Development_Icon.svg"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 10px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                Mobile App Development
+              </h5>
+              <p class="card-text text-justify">
+                Be sure to have your online business presence on Google App
+                Store or Apple Store today. With the help of our team, we
+                deliver scalable and perfectly positioned apps with enhanced
+                user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Image and Card -->
+        <div class="col-12 mb-4 d-flex align-items-left">
+          <img
+            src="../static/images/ui_ux_design.png"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 10px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                UI/UX Design
+              </h5>
+              <p class="card-text text-justify">
+                We understand the soul of your brand and translate it into
+                interfaces
+                that captivate users. Beyond stunning visuals,
+                we design for intuitiveness guiding your customers seamlessly
+                to their goals
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-md-none">
+      <div class="row mt-3 justify-content-between">
+        <!-- First Card and Image -->
+        <div class="col-12 mb-4 d-flex align-items-left">
+          <img
+            src="../static/images/Data_Science_Icon.svg"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 10px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                Data Science and Analytics
+              </h5>
+              <p class="card-text text-justify">
+                Make data-driven decisions with the help of our AI powered
+                solutions. Our Data Mining tools along with Predictive
+                Analytics and Data Analysis can help you with your Business
+                Decisions by providing actionable insights.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Image and Card -->
+        <div class="col-12 mb-4 d-flex align-items-left">
+          <img
+            src="../static/images/Hire_Developers_Icon.svg"
+            class="img-fluid rounded"
+            alt="AI Logo"
+            style="width: 60px; height: 60px" />
+          <div
+            class="card text-start border-0 text-justify bg-transparent"
+            style="margin-left: 10px">
+            <div class="card-body custom-card">
+              <h5 class="card-title card-heading font-weight-bold">
+                Hire Developers
+              </h5>
+              <p class="card-text text-justify">
+                Our “can do” attitude developers help you rapidly scale up
+                your projects or expand your operation. Hire a single
+                developer or an entire team to complete your project
+                successfully. Hire great talent and deliver top results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="footer-container ">
+
+  <!-- Footer -->
+  <footer
+    class="text-center text-lg-start text-white"
+    style="background-color: #1c2331">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-between p-4"
+      style="background-color: rgb(7, 159, 124)">
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+
+        <a href="https://www.linkedin.com/in/aliakber79/"
+          class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=923349763732"
+          class="text-white me-4">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:hello@megasight.ai" class="text-white me-4">
+          <i class="far fa-envelope"></i>
+        </a>
+
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class>
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">MegaSight.Ai</h6>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              We meticulously craft and deploy enduring Machine Learning
+              solutions.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Services</h6>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              <a href class="text-white" style="font-weight: bold;">Web
+                Development</a>
+            </p>
+            <p>
+              <a href class="text-white" style="font-weight: bold;">Machine
+                Learning</a>
+            </p>
+            <p>
+              <a href class="text-white" style="font-weight: bold;">Data
+                Science</a>
+            </p>
+            <p>
+              <a href class="text-white" style="font-weight: bold;">Mobile
+                App Development</a>
+            </p>
+
+            <p>
+              <a href class="text-white" style="font-weight: bold;">UI/UX
+                Design</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Quick Links</h6>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              <a href="{{ url_for('about') }}" class="text-white">About
+                Us</a>
+            </p>
+            <p>
+              <a href="{{ url_for('index') }}" class="text-white">Home</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <!--<p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>-->
+            <p><i class="fas fa-envelope mr-3"></i> hello@megasight.ai</p>
+            <!--<p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+      class="text-center p-3"
+      style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023 Copyright:
+      <a class="text-white" href="https://megasight.ai/">MegaSight.Ai</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous">
+    </script>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Target elements
+      const headingSection = document.getElementById('swip-up-onscroll');
+      const upperPillarSection = document.getElementById('our-edge-heading');
+      const additionalElement = document.getElementById('our-founder-card-movement');
+      const additionalElement2 = document.getElementById('our-founder-card-movement-2line');
+      const additionalElement3 = document.getElementById('our-founder-card-movement-3line');
+  
+      // Cards
+      const cardElements = document.querySelectorAll('.our-founders-card-col');
+  
+      // Intersection Observer options
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5, // Adjust the threshold as needed
+      };
+  
+      // Intersection Observer callback
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+  
+      // Create Intersection Observer for headingSection
+      const observerHeading = new IntersectionObserver(callback, options);
+      observerHeading.observe(headingSection);
+  
+      // Create Intersection Observer for upperPillarSection
+      const observerUpperPillar = new IntersectionObserver(callback, options);
+      observerUpperPillar.observe(upperPillarSection);
+  
+      // Create Intersection Observer for additionalElement
+      const observerAdditionalElement = new IntersectionObserver(callback, options);
+      observerAdditionalElement.observe(additionalElement);
+  
+      // Create Intersection Observer for additionalElement2
+      const observerAdditionalElement2 = new IntersectionObserver(callback, options);
+      observerAdditionalElement2.observe(additionalElement2);
+  
+      // Create Intersection Observer for additionalElement3
+      const observerAdditionalElement3 = new IntersectionObserver(callback, options);
+      observerAdditionalElement3.observe(additionalElement3);
+  
+      // Create Intersection Observer for each card
+      const observerCards = new IntersectionObserver(callback, options);
+      cardElements.forEach((card) => {
+        observerCards.observe(card);
+      });
+    });
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

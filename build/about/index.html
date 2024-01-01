@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Megasight</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico" />
+    <!-- Include FontAwesome library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-xrFSWMDiV2c9xZUQaTlQuNQz8DyuwdeR1J4Kw1ofOuGz6wVnRCYK7vD0BCkSD1tlUwt+1cFjR6at3vK86WIvgQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/styles/style_about.css"
+    />
+  </head>
+
+  <body>
+    <div class="d-flex align-items-center" style="height: 12vh">
+      <nav class="navbar navbar-dark navbar-expand-lg fixed-top mx-auto">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">MegaSight.Ai</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Contact Modal -->
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-slidein">
+        <div class="modal-content form-modal-content">
+          <div class="modal-header textarea">
+            <h5 class="modal-title form-modal-title" id="contactModalLabel">
+              Contact Us
+            </h5>
+          </div>
+          <div class="modal-body">
+            <!-- Form container -->
+            <div class="form-container">
+              <!-- Your contact form -->
+              <form>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="companyEmail"
+                  name="companyEmail"
+                  required
+                  placeholder="Company email"
+                />
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="role"
+                  name="role"
+                  placeholder="Role at the company (optional)"
+                />
+
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="Contact number"
+                />
+
+                <input
+                  type="url"
+                  class="form-control"
+                  id="website"
+                  name="website"
+                  placeholder="Enter your website (optional)"
+                />
+
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Type your message here (optional)"
+                ></textarea>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+              <!-- End contact form -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Section -->
+    <div class="about-section">
+      <h3 class="about-section-heading">About MegaSight.Ai<br /><br /></h3>
+    </div>
+
+    <!-- Our Vision Section -->
+    <div class="container mt-5 container-with-margin">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="card custom-card">
+            <div class="card-body">
+              <h3 class="card-title custom-card-heading">Our Vision</h3>
+              <div class="row">
+                <div class="col-md-5">
+                  <p class="text-justify custom-card-content text-start">
+                    Megaisght: a leading tech enterprise driving progress
+                    through cutting-edge innovation. Our solutions go beyond
+                    business, shaping a better future.
+                    <br /><br />
+                    At the forefront of technology, Megaisght delivers
+                    innovative solutions exceeding diverse client needs. Our
+                    mission extends beyond commerce, championing societal causes
+                    and positively impacting communities.
+                    <br /><br />
+                    Megasight: where excellence fuels responsible innovation for
+                    a brighter tomorrow. Join us in shaping a future where
+                    technology uplifts.
+                  </p>
+                </div>
+                <div class="col-md-5 offset-md-2 d-flex align-items-center">
+                  <img
+                    src="../static/images/team building.jpg"
+                    alt="Image Alt Text"
+                    class="img-fluid"
+                    style="width: 100%; height: auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillars-container container-fluid">
+      <div class="principles">
+        <h3 class="principles-heading">
+          The Beacons of Excellence<br /><br />
+        </h3>
+      </div>
+
+      <div>
+        <div class="row justify-content-center" id="swip-up-onscroll">
+          <!-- Card 1 -->
+          <div class="col-md-2 principle-card-col">
+            <div class="card principle-card">
+              <img
+                src="../static/images/Explainable_models.png"
+                class="card-img-top"
+                alt="Image 1"
+              />
+              <div class="card-body">
+                <p class="principle-card-heading-text">Efficient Models</p>
+                <p class="principle-card-text">
+                  Our commitment to responsible AI drives our focus on
+                  explainability and accountability
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-2 principle-card-col">
+            <div class="card principle-card">
+              <img
+                src="../static/images/Entrepreneurial.png"
+                class="card-img-top"
+                alt="Image 2"
+              />
+              <div class="card-body">
+                <p class="principle-card-heading-text">Pioneering</p>
+                <p class="principle-card-text">
+                  We empower entrepreneurs with explainable ML solutions,
+                  starting with a clear vision and actionable roadmap
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-2 principle-card-col">
+            <div class="card principle-card">
+              <img
+                src="../static/images/Engineering.png"
+                class="card-img-top"
+                alt="Image 3"
+              />
+              <div class="card-body">
+                <p class="principle-card-heading-text">Technology</p>
+                <p class="principle-card-text">
+                  Great ML demands both data science and engineering. We deliver
+                  production-ready engines, not just theoretical models
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-2 principle-card-col">
+            <div class="card principle-card">
+              <img
+                src="../static/images/human_involvement.png"
+                class="card-img-top"
+                alt="Image 4"
+              />
+              <div class="card-body">
+                <p class="principle-card-heading-text">Human Contribution</p>
+                <p class="principle-card-text">
+                  Content experts fuel our rapid iteration, delivering
+                  production-ready solutions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div
+      class="our-edge-section-container container-fluid"
+      id="our-edge-heading"
+    >
+      <div>
+        <h3 class="our-edge-section-heading">Our Edge<br /><br /></h3>
+      </div>
+      <div class="row justify-content-center">
+        <!-- Card 2 -->
+        <div class="col-md-5 mb-4">
+          <div class="card our-edge-section-card">
+            <div class="card-body">
+              <p class="our-edge-section-card-heading">
+                Profound Understanding
+              </p>
+              <p class="our-edge-section-card-text">
+                MegaSight has established itself as a leading force in the
+                global asset finance and leasing industry. We leverage our
+                extensive experience and knowledge, continuously refined and
+                updated, to deliver innovative solutions and best practices that
+                empower our clients and partners to achieve their goals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-5 mb-4">
+          <div class="card our-edge-section-card">
+            <div class="card-body">
+              <p class="our-edge-section-card-heading">
+                Guaranteed Service Levels
+              </p>
+              <p class="our-edge-section-card-text">
+                Driven by industry experts, we deliver dedicated attention and
+                exceptional service, solidifying our position as a leading
+                global provider. Our award-winning portfolio is a testament to
+                our commitment to excellence, empowering clients to achieve
+                their goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="our-founders-container container-fluid">
+      <div>
+        <h3 class="our-founders-heading">Meet Our Founders<br /><br /></h3>
+      </div>
+      <div class="row justify-content-center">
+        <!-- Card 1 -->
+        <div
+          class="col-md-3 our-founders-card-col"
+          id="our-founder-card-movement"
+        >
+          <div class="card our-founders-card">
+            <img
+              src="../static/images/ali_azam_cropped.jpg"
+              class="card-img-top"
+              alt="Image 1"
+            />
+            <div class="card-body">
+              <p class="our-founders-card-heading-text">Ali Azam</p>
+              <p class="our-founders-card-text">Co-Founder</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-md-3 our-founders-card-col"
+          id="our-founder-card-movement"
+        >
+          <div class="card our-founders-card">
+            <img
+              src="../static/images/placeholder_cropped.png"
+              class="card-img-top"
+              alt="Image 1"
+            />
+            <div class="card-body">
+              <p class="our-founders-card-heading-text">Ali Akber</p>
+              <p class="our-founders-card-text">Co-Founder</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+
+        <!-- Card 3 -->
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <!-- Footer -->
+      <footer
+        class="text-center text-lg-start text-white"
+        style="background-color: #1c2331"
+      >
+        <!-- Section: Social media -->
+        <section
+          class="d-flex justify-content-between p-4"
+          style="background-color: rgb(7, 159, 124)"
+        >
+          <!-- Left -->
+          <div class="me-5">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+
+          <!-- Right -->
+          <div>
+            <a
+              href="https://www.linkedin.com/in/aliakber79/"
+              class="text-white me-4"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=923349763732"
+              class="text-white me-4"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:hello@megasight.ai" class="text-white me-4">
+              <i class="far fa-envelope"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class>
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold">MegaSight.Ai</h6>
+                <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>
+                  We meticulously craft and deploy enduring Machine Learning
+                  solutions.
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Services</h6>
+                <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>
+                  <a href class="text-white" style="font-weight: bold"
+                    >Web Development</a
+                  >
+                </p>
+                <p>
+                  <a href class="text-white" style="font-weight: bold"
+                    >Machine Learning</a
+                  >
+                </p>
+                <p>
+                  <a href class="text-white" style="font-weight: bold"
+                    >Data Science</a
+                  >
+                </p>
+                <p>
+                  <a href class="text-white" style="font-weight: bold"
+                    >Mobile App Development</a
+                  >
+                </p>
+
+                <p>
+                  <a href class="text-white" style="font-weight: bold"
+                    >UI/UX Design</a
+                  >
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Quick Links</h6>
+                <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>
+                  <a href="/about/" class="text-white"
+                    >About Us</a
+                  >
+                </p>
+                <p>
+                  <a href="/" class="text-white">Home</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Contact</h6>
+                <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <!--<p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>-->
+                <p><i class="fas fa-envelope mr-3"></i> hello@megasight.ai</p>
+                <!--<p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2023 Copyright:
+          <a class="text-white" href="https://megasight.ai/">MegaSight.Ai</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Target elements
+        const headingSection = document.getElementById("swip-up-onscroll");
+        const upperPillarSection = document.getElementById("our-edge-heading");
+        const additionalElement = document.getElementById(
+          "our-founder-card-movement"
+        );
+
+        // Cards
+        const cardElements = document.querySelectorAll(
+          ".our-founders-card-col"
+        );
+
+        // Intersection Observer options
+        const options = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.5, // Adjust the threshold as needed
+        };
+
+        // Intersection Observer callback
+        const callback = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
+              observer.unobserve(entry.target);
+            }
+          });
+        };
+
+        // Create Intersection Observer for headingSection
+        const observerHeading = new IntersectionObserver(callback, options);
+        observerHeading.observe(headingSection);
+
+        // Create Intersection Observer for upperPillarSection
+        const observerUpperPillar = new IntersectionObserver(callback, options);
+        observerUpperPillar.observe(upperPillarSection);
+
+        // Create Intersection Observer for additionalElement
+        const observerAdditionalElement = new IntersectionObserver(
+          callback,
+          options
+        );
+        observerAdditionalElement.observe(additionalElement);
+
+        // Create Intersection Observer for each card
+        const observerCards = new IntersectionObserver(callback, options);
+        cardElements.forEach((card) => {
+          observerCards.observe(card);
+        });
+      });
+    </script>
+
+    <script>
+      // WhatsApp functionality
+      document
+        .getElementById("whatsapp-icon")
+        .addEventListener("click", function () {
+          window.open(
+            "https://api.whatsapp.com/send?phone=923314191637",
+            "_blank"
+          );
+        });
+
+      // LinkedIn functionality
+      document
+        .getElementById("linkedin-icon")
+        .addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/aliakber79/", "_blank");
+        });
+    </script>
+  </body>
+</html>

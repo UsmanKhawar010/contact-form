@@ -1,0 +1,13 @@
+p.card-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+h5.card-title.card-heading.font-weight-bold {
+    text-align: center;
+}
+.justify-content-between {
+    margin: 0 -50px;
+    justify-content: space-around!important;
+}
+
+
